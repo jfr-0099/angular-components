@@ -8,13 +8,21 @@
     </mat-card-header>
 
     <mat-card-content>
-        <input type="text">
-        <button>
+        <mat-form-field>
+            <mat-label>Custom Topping</mat-label>
+            <input 
+                matInput
+                [value]= "customTopping()"
+                >
+  </mat-form-field>
+
+        <button
+        matButton="elevated"
+        (click)="customTopping()"
+        >
             Add
         </button>
-
-        <ul>
-            <li></li>
-        </ul>
+        <br>
+        {{customToppingList()}}
     </mat-card-content>
 </mat-card>
