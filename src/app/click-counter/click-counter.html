@@ -1,7 +1,15 @@
-<h2>Click Counter</h2>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Click Counter</mat-card-title>
+    </mat-card-header>
 
-<p>Count: {{ count }}</p>
+    <mat-card-content>
+        <p>Current Count: {{ count }}</p>
+    </mat-card-content>
 
-<button (click)="increase()">+</button>
-<button (click)="decrease()">-</button>
-<button (click)="reset()">Reset</button>
+    <mat-card-actions>
+        <button matButton="outlined" (click)="increase()">+</button>
+        <button matButton="outlined" (click)="decrease()">-</button>
+        <button matButton="outlined" (click)="reset()">Reset</button>
+    </mat-card-actions>
+</mat-card>

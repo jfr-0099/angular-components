@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-click-counter',
-  imports: [],
+  imports: [    
+    MatCardModule,
+    MatButtonModule
+  ],
   templateUrl: './click-counter.html',
   styleUrl: './click-counter.css',
 })
