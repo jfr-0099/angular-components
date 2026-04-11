@@ -6,8 +6,11 @@
   <mat-card-content>
     <div class="ball">
       <div class="window">
-        <span *ngIf="result()">{{ result() }}</span>
-        <span *ngIf="!result()">Ask a question...</span>
+        @if (!result()) {
+          <p>Ask a question...</p>
+        } @else {
+          <p>{{ result() }}</p>
+        }
       </div>
     </div>
 
@@ -16,7 +19,8 @@
       color="primary"
       (click)="shake()"
     >
-      Shake The 8‑Ball
+      Shake 8‑Ball
     </button>
   </mat-card-content>
 </mat-card>
+
